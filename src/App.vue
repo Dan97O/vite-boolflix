@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     moviesFound() {
-      const url = this.store.API_URL + this.store.searchMovies
+      const url = this.store.API_URL && this.store.API_URL_TV + this.store.searchMovies
       this.store.callApi(url)
     }
   },
