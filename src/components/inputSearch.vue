@@ -13,7 +13,7 @@ export default {
 
 <template>
   <div>
-    <input type="text" v-model="this.store.searchMovies">
+    <input type="text" placeholder="Ricerca Film o Serie TV" v-model="this.store.searchMovies">
     <button @click="$emit('moviesShow')"> Click </button>
   </div>
 </template>

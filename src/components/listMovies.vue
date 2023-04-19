@@ -12,12 +12,19 @@ export default {
 
 <template>
   <ul v-for="movie in this.store.movies">
-    <li>Titolo: {{ movie.title }}</li>
-    <li>Titolo Originale: {{ movie.original_title }}</li>
-    <li>Lingua: {{ movie.original_language }}</li>
-    <li>Voto: {{ movie.vote_average }}</li>
+    <li><strong>Titolo: </strong>{{ movie.title }}</li>
+    <li><strong>Titolo Originale: </strong>{{ movie.original_title }}</li>
+    <li><strong>Lingua: </strong>{{ movie.original_language }}
+      <img class="flags" v-if="store.movies" :src="store.getFlagsUrl(movie)" />
+    </li>
+    <li><strong>Voto: </strong>{{ movie.vote_average }}</li>
   </ul>
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.flags {
+  height: 20px;
+  object-fit: contain;
+}
+</style>

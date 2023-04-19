@@ -7,8 +7,10 @@ export const store = reactive({
   api_base: "https://api.themoviedb.org/3/search/movie",
   api_key: 'ca6353eac5048425ca03d3a2a47014d3',
   API_URL: "https://api.themoviedb.org/3/search/movie?api_key=ca6353eac5048425ca03d3a2a47014d3&query=",
+  api_urlFlags: 'https://flagsapi.com/',
   movies: null,
   searchMovies: "",
+  flags: ['IT', 'FR', 'US', 'GB', 'DE', 'ES', 'JP', 'FI'],
 
   callApi(url) {
     axios
@@ -22,4 +24,13 @@ export const store = reactive({
       })
 
   },
+  getFlagsUrl(movie) {
+    if (this.flags.includes(movie.original_language.toUpperCase()) && movie.original_language != null) {
+      let url
+      url = this.api_urlFlags + movie.original_language.toUpperCase() + '/shiny/64.png'
+      return url
+    } else {
+      return 'https://ih1.redbubble.net/image.605890193.3639/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg'
+    }
+  }
 })
