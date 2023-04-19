@@ -1,22 +1,27 @@
 <script>
 import { store } from './store';
+import inputSearch from './components/inputSearch.vue';
 export default {
+  components: {
+    inputSearch,
+  },
   data() {
 
     return {
       store
     }
   },
-  mounted() {
-    this.store.callApi(this.store.API_URL + this.store.searchMovies)
-  }
+  methods: {
+    moviesFound() {
+      const url = this.store.API_URL + this.store.searchMovies
+      this.store.callApi(url)
+    }
+  },
 }
 </script>
 
 <template>
-  <div>
-    <input type="text" v-model="store.searchMovies">
-  </div>
+  <inputSearch @moviesShow="moviesFound()" />
 </template>
 
 <style></style>
