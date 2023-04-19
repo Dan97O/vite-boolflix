@@ -17,8 +17,11 @@ export default {
       return movie.original_title || movie.original_name || 'Titolo originale non disponibile';
     },
   },
+
 }
 </script>
+
+
 
 <template>
   <ul v-for="movie in this.store.movies">
@@ -28,7 +31,15 @@ export default {
     <li><strong>Lingua: </strong>{{ movie.original_language }}
       <img class="flags" v-if="store.movies" :src="store.getFlagsUrl(movie)" />
     </li>
-    <li><strong>Voto: </strong>{{ movie.vote_average }}</li>
+    <!-- Voto diviso 2 e arrotondato per eccesso -->
+    <li><strong>Voto: </strong>{{ Math.ceil(movie.vote_average / 2) }}</li>
+    <li>
+      <strong>Stelle: </strong>
+      <span v-for="i in 5">
+        <i v-if="i <= Math.ceil(movie.vote_average / 2)" class="fas fa-star"></i>
+        <i v-else class="far fa-star"></i>
+      </span>
+    </li>
   </ul>
 </template>
 
