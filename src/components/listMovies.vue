@@ -27,9 +27,8 @@ export default {
   <ul v-for="movie in this.store.movies">
     <img :src="store.getImgUrl(movie)" alt="">
     <li><strong>Titolo: </strong>{{ showTitle(movie) }}</li>
-    <li><strong>Titolo Originale:: </strong>{{ showOriginalTitle(movie) }}</li>
-    <li><strong>Lingua: </strong>
-      <img class="flags" v-if="store.movies" :src="store.getFlagsUrl(movie)" />
+    <li><strong>Titolo Originale: </strong>{{ showOriginalTitle(movie) }}</li>
+    <li><strong>Lingua: </strong><img class="flags" v-if="store.movies" :src="store.getFlagsUrl(movie)" />
     </li>
     <!-- Voto diviso 2 e arrotondato per eccesso -->
     <li><strong>Voto: </strong>{{ Math.ceil(movie.vote_average / 2) }}</li>
@@ -49,10 +48,11 @@ ul {
   width: 300px;
   list-style: none;
   padding: 0;
+  //border: 1px solid rgba(0, 0, 0, 0.945);
 
   img {
     width: 300px;
-    height: 500px;
+    height: 450px;
     object-fit: cover;
   }
 
@@ -65,5 +65,6 @@ ul {
 .flags {
   height: 20px;
   object-fit: contain;
+  width: 20px;
 }
 </style>
