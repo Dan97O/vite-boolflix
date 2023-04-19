@@ -1,9 +1,11 @@
 <script>
 import { store } from './store';
 import inputSearch from './components/inputSearch.vue';
+import listMovies from './components/listMovies.vue';
 export default {
   components: {
     inputSearch,
+    listMovies,
   },
   data() {
 
@@ -22,6 +24,7 @@ export default {
 
 <template>
   <inputSearch @moviesShow="moviesFound()" />
+  <listMovies />
 </template>
 
 <style></style>
