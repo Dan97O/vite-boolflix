@@ -9,9 +9,11 @@ export default {
   },
   methods: {
     showTitle(movie) {
+      //mostra sia il titolo dei film che delle serie Tv, se non è diponibile lo scrive in pagina
       return movie.title || movie.name || 'Titolo non disponibile';
     },
     showOriginalTitle(movie) {
+      //mostra sia il titolo originale dei film che delle serie Tv, se non è diponibile lo scrive in pagina
       return movie.original_title || movie.original_name || 'Titolo originale non disponibile';
     },
   },
@@ -20,6 +22,7 @@ export default {
 
 <template>
   <ul v-for="movie in this.store.movies">
+    <img :src="store.getImgUrl(movie)" alt="">
     <li><strong>Titolo: </strong>{{ showTitle(movie) }}</li>
     <li><strong>Titolo Originale:: </strong>{{ showOriginalTitle(movie) }}</li>
     <li><strong>Lingua: </strong>{{ movie.original_language }}
