@@ -6,16 +6,22 @@ export default {
     return {
       store
     }
-  }
+  },
+  methods: {
+    showTitle(movie) {
+      return movie.title || movie.name || 'Titolo non disponibile';
+    },
+    showOriginalTitle(movie) {
+      return movie.original_title || movie.original_name || 'Titolo originale non disponibile';
+    },
+  },
 }
 </script>
 
 <template>
   <ul v-for="movie in this.store.movies">
-    <li v-if="movie.title"><strong>Titolo: </strong>{{ movie.title }}</li>
-    <li v-else="movie.name"><strong>Titolo: </strong>{{ movie.name }}</li>
-    <li v-if="movie.original_title"><strong>Titolo Originale: </strong>{{ movie.original_title }}</li>
-    <li v-else="movie.original_name"><strong>Titolo Originale: </strong>{{ movie.original_name }}</li>
+    <li><strong>Titolo: </strong>{{ showTitle(movie) }}</li>
+    <li><strong>Titolo Originale:: </strong>{{ showOriginalTitle(movie) }}</li>
     <li><strong>Lingua: </strong>{{ movie.original_language }}
       <img class="flags" v-if="store.movies" :src="store.getFlagsUrl(movie)" />
     </li>
