@@ -12,7 +12,7 @@ export const store = reactive({
   api_urlFlags: 'https://flagsapi.com/',
   movies: null,
   searchMovies: "",
-  flags: ['IT', 'FR', 'US', 'GB', 'DE', 'ES', 'JP', 'FI'],
+  flags: ['IT', 'FR', 'US', 'GB', 'DE', 'ES', 'JP', 'FI', 'RU'],
 
   callApi(url) {
     axios

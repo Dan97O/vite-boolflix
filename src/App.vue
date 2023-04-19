@@ -1,30 +1,23 @@
 <script>
 import { store } from './store';
-import inputSearch from './components/inputSearch.vue';
-import listMovies from './components/listMovies.vue';
+import appHeader from './components/appHeader.vue';
+import appMain from './components/appMain.vue';
 export default {
   components: {
-    inputSearch,
-    listMovies,
+    appHeader,
+    appMain,
   },
   data() {
-
     return {
       store
-    }
-  },
-  methods: {
-    moviesFound() {
-      const url = this.store.API_URL && this.store.API_URL_TV + this.store.searchMovies
-      this.store.callApi(url)
     }
   },
 }
 </script>
 
 <template>
-  <inputSearch @moviesShow="moviesFound()" />
-  <listMovies />
+  <appHeader />
+  <appMain />
 </template>
 
 <style></style>

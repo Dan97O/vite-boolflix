@@ -28,7 +28,7 @@ export default {
     <img :src="store.getImgUrl(movie)" alt="">
     <li><strong>Titolo: </strong>{{ showTitle(movie) }}</li>
     <li><strong>Titolo Originale:: </strong>{{ showOriginalTitle(movie) }}</li>
-    <li><strong>Lingua: </strong>{{ movie.original_language }}
+    <li><strong>Lingua: </strong>
       <img class="flags" v-if="store.movies" :src="store.getFlagsUrl(movie)" />
     </li>
     <!-- Voto diviso 2 e arrotondato per eccesso -->
@@ -45,6 +45,23 @@ export default {
 
 
 <style lang="scss" scoped>
+ul {
+  width: 300px;
+  list-style: none;
+  padding: 0;
+
+  img {
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  li {
+    padding-left: 1rem;
+  }
+}
+
+
 .flags {
   height: 20px;
   object-fit: contain;
