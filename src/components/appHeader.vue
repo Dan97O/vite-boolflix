@@ -13,12 +13,6 @@ export default {
       store
     }
   },
-  methods: {
-    moviesFound() {
-      const url = this.store.API_URL && this.store.API_URL_TV + this.store.searchMovies
-      this.store.callApi(url)
-    }
-  },
 }
 </script>
 <template>
@@ -30,7 +24,7 @@ export default {
             alt="Logo Netflix">
         </div>
         <div class="col-4 justify-content-end d-flex align-items-center">
-          <inputSearch @moviesShow="moviesFound()" />
+          <inputSearch @moviesShow="store.callApi()" />
         </div>
       </div>
     </div>
@@ -38,18 +32,21 @@ export default {
 </template>
 
 
-<style lang="scss" scoped>
-header {
-  padding: 1rem 0;
-  background-color: black;
+<style lang="scss" scoped> header {
+   padding: 1rem 0;
+   background-color: black;
+   top: 0px;
+   left: 0px;
+   position: sticky;
+   box-shadow: 10px 9px 10px 6px black;
 
 
 
-  .img-logo {
-    img {
-      height: 70px;
+   .img-logo {
+     img {
+       height: 70px;
 
-    }
-  }
-}
+     }
+   }
+ }
 </style>
