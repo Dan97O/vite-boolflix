@@ -41,6 +41,7 @@ export default {
           <i v-else class="far fa-star"></i>
         </span>
       </li>
+      <li class="overview"><strong>Trama: </strong>{{ movie.overview }}</li>
     </ul>
   </div>
 </template>
@@ -66,8 +67,8 @@ export default {
 }
 
 .card:hover {
-  img {
-    filter: opacity(0.5);
+  .card-img-top {
+    filter: opacity(0.3);
   }
 }
 
@@ -88,6 +89,10 @@ export default {
     height: 20px;
     object-fit: contain;
     width: 20px;
+  }
+
+  .overview {
+    font-size: 12px;
   }
 }
 </style>
