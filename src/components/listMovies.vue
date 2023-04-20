@@ -26,8 +26,10 @@ export default {
 <template>
   <div class="card" v-for="movie in this.store.movies">
     <img class=" card-img-top" :src="store.getImgUrl(movie)" alt="">
+    <ul class="title p-0">
+      <li class="text-center p-1">{{ showTitle(movie) }}</li>
+    </ul>
     <ul class="info">
-      <li><strong>Titolo: </strong>{{ showTitle(movie) }}</li>
       <li><strong>Titolo Originale: </strong>{{ showOriginalTitle(movie) }}</li>
       <li><strong>Lingua: </strong>
         <img class="flags" v-if="store.movies" :src="store.getFlagsUrl(movie)" />
@@ -55,6 +57,22 @@ export default {
   border-radius: 10px;
   box-shadow: 10px 9px 10px 6px black;
 
+  .title {
+    position: absolute;
+    bottom: -16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    background: #00000078;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
   img {
     height: 450px;
     object-fit: cover;
@@ -67,6 +85,10 @@ export default {
 }
 
 .card:hover {
+  .title {
+    display: none;
+  }
+
   .card-img-top {
     filter: opacity(0.3);
   }
@@ -83,6 +105,7 @@ export default {
 
   li {
     padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .flags {

@@ -11,7 +11,7 @@ export default {
   <main>
     <div class="container-fluid pt-3">
       <div class="row">
-        <div class="col-12 d-flex flex-wrap justify-content-center gap-1">
+        <div class="col-12 d-flex flex-wrap justify-content-center">
           <listMovies />
         </div>
         <!-- /.col-12 -->
