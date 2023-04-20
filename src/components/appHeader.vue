@@ -17,14 +17,16 @@ export default {
 </script>
 <template>
   <header>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="img-logo col-8">
-          <img src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
-            alt="Logo Netflix">
-        </div>
-        <div class="col-4 justify-content-end d-flex align-items-center">
-          <inputSearch @moviesShow="store.callApi()" />
+    <div class="position-fixed">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="img-logo col-8">
+            <img src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
+              alt="Logo Netflix">
+          </div>
+          <div class="col-4 justify-content-end d-flex align-items-center">
+            <inputSearch @moviesShow="store.callApi()" />
+          </div>
         </div>
       </div>
     </div>
@@ -35,12 +37,21 @@ export default {
 <style lang="scss" scoped> header {
    padding: 1rem 0;
    background-color: black;
-   top: 0px;
-   left: 0px;
-   position: sticky;
-   box-shadow: 10px 9px 10px 6px black;
+   height: 110px;
+   position: relative;
 
 
+   .position-fixed {
+     padding: 1rem 0;
+     background-color: black;
+     box-shadow: 10px 9px 10px 6px black;
+     top: 0px;
+     left: 0px;
+     width: 100%;
+     z-index: 500;
+
+
+   }
 
    .img-logo {
      img {

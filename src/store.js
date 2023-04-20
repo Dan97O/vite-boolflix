@@ -19,16 +19,17 @@ export const store = reactive({
   callApi() {
     const movieUrl = `${this.api_base}${this.movieUrl}?api_key=${this.api_key}&query=${this.searchMovies}`;
     const tvUrl = `${this.api_base}${this.tvUrl}?api_key=${this.api_key}&query=${this.searchMovies}`;
-
-    //Promise= per fare richieste contemporaneamente
+    let results = [];
+    //Promise.all per fare 2 chiamate contemporaneamente
     Promise.all([
       axios.get(movieUrl),
       axios.get(tvUrl),
     ])
       .then(responses => {
-        const movieResults = responses[0].data.results;
-        const tvResults = responses[1].data.results;
-        this.movies = [...movieResults, ...tvResults];
+        for (let i = 0; i < responses.length; i++) {
+          results.push(...responses[i].data.results);
+        }
+        this.movies = results;
       })
       .catch(error => {
         console.error(error.message);
