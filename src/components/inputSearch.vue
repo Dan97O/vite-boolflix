@@ -24,7 +24,6 @@ export default {
 input {
   background-color: rgba(0, 0, 0, 0.945);
   color: lightgrey;
-
 }
 
 button {

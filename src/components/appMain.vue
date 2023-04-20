@@ -9,7 +9,7 @@ export default {
 </script>
 <template>
   <main>
-    <div class="container-fluid pt-3">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-12 d-flex flex-wrap justify-content-center">
           <listMovies />
@@ -19,9 +19,6 @@ export default {
       <!-- /.row -->
     </div>
     <!-- /.container -->
-
-
-
   </main>
 </template>
 

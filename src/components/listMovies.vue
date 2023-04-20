@@ -52,10 +52,11 @@ export default {
 <style lang="scss" scoped>
 .card {
   width: 300px;
-  background-color: black;
-  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.945);
+  margin-bottom: 3rem;
   border-radius: 10px;
-  box-shadow: 10px 9px 10px 6px black;
+  margin-right: 25px;
+  box-shadow: 10px 9px 10px 6px #363636;
 
   .title {
     position: absolute;

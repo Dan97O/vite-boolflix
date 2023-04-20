@@ -40,17 +40,14 @@ export default {
    height: 110px;
    position: relative;
 
-
    .position-fixed {
      padding: 1rem 0;
      background-color: black;
-     box-shadow: 10px 9px 10px 6px black;
+     box-shadow: 4px -2px 12px 6px #363636;
      top: 0px;
      left: 0px;
      width: 100%;
      z-index: 500;
-
-
    }
 
    .img-logo {
