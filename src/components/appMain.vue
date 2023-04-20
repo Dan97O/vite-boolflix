@@ -1,9 +1,9 @@
 <script>
-import listMovies from './listMovies.vue';
+import ListMovies from './listMovies.vue';
 export default {
-  name: 'appMain',
+  name: 'AppMain',
   components: {
-    listMovies
+    ListMovies
   }
 }
 </script>
@@ -12,7 +12,7 @@ export default {
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 d-flex flex-wrap justify-content-center">
-          <listMovies />
+          <ListMovies />
         </div>
         <!-- /.col-12 -->
       </div>

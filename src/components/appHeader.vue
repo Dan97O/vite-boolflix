@@ -1,10 +1,10 @@
 <script>
 import { store } from '../store';
-import inputSearch from './inputSearch.vue';
+import InputSearch from './inputSearch.vue';
 export default {
   name: 'appHeader',
   components: {
-    inputSearch,
+    InputSearch,
 
   },
   data() {
@@ -25,7 +25,7 @@ export default {
               alt="Logo Netflix">
           </div>
           <div class="col-4 justify-content-end d-flex align-items-center">
-            <inputSearch @moviesShow="store.callApi()" />
+            <InputSearch @moviesShow="store.callApi()" />
           </div>
         </div>
       </div>
