@@ -1,7 +1,7 @@
 <script>
 import { store } from '../store';
 export default {
-  name: 'ListMovies',
+  name: 'MoviesList',
   data() {
     return {
       store

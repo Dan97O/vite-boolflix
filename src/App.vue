@@ -1,11 +1,11 @@
 <script>
 import { store } from './store';
-import AppHeader from './components/appHeader.vue';
-import AppMain from './components/appMain.vue';
+import SiteHeader from './components/SiteHeader.vue';
+import SiteMain from './components/SiteMain.vue';
 export default {
   components: {
-    AppHeader,
-    AppMain,
+    SiteHeader,
+    SiteMain,
   },
   data() {
     return {
@@ -16,8 +16,8 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-  <AppMain />
+  <SiteHeader />
+  <SiteMain />
 </template>
 
 <style></style>

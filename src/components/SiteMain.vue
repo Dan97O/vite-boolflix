@@ -1,9 +1,9 @@
 <script>
-import ListMovies from './listMovies.vue';
+import MoviesList from './MoviesList.vue';
 export default {
-  name: 'AppMain',
+  name: 'SiteMain',
   components: {
-    ListMovies
+    MoviesList
   }
 }
 </script>
@@ -11,8 +11,9 @@ export default {
   <main>
     <div class="container-fluid">
       <div class="row">
+        <h1 class="text-center pb-2">ORIGINALI NETFLIX</h1>
         <div class="col-12 d-flex flex-wrap justify-content-center">
-          <ListMovies />
+          <MoviesList />
         </div>
         <!-- /.col-12 -->
       </div>
