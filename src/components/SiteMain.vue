@@ -17,7 +17,7 @@ export default {
   <main>
     <div class="container-fluid">
       <div class="row">
-        <h1 class="text-center pb-2" v-if="store.movies.length > 0">ORIGINALI NETFLIX</h1>
+        <h1 class="text-center pb-2 mt-3" v-if="store.movies.length > 0">ORIGINALI NETFLIX</h1>
         <div class="p-0" v-else>
           <div class="view"></div>
         </div>

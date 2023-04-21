@@ -1,14 +1,14 @@
 <script>
 import { store } from '../store';
 import SearchInput from './SearchInput.vue';
+import NavHeader from './NavHeader.vue';
 export default {
   name: 'SiteHeader',
   components: {
     SearchInput,
-
+    NavHeader
   },
   data() {
-
     return {
       store
     }
@@ -21,8 +21,7 @@ export default {
       <div class="container-fluid">
         <div class="row">
           <div class="img-logo col-8">
-            <img src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
-              alt="Logo Netflix">
+            <NavHeader />
           </div>
           <div class="col-4 justify-content-end d-flex align-items-center">
             <SearchInput @moviesShow="store.callApi()" />
@@ -53,7 +52,6 @@ export default {
    .img-logo {
      img {
        height: 70px;
-
      }
    }
  }
