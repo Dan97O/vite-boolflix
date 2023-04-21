@@ -50,6 +50,19 @@ export default {
 
 
 <style lang="scss" scoped>
+.info::-webkit-scrollbar {
+  width: 3px;
+}
+
+.info:-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.945);
+}
+
+.info::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 25px;
+}
+
 .card {
   width: 415px;
   background-color: rgba(0, 0, 0, 0.945);
@@ -103,6 +116,9 @@ export default {
   position: absolute;
   top: 20px;
   left: 0;
+  height: 90%;
+  overflow-y: auto;
+
 
   li {
     padding-left: 1rem;
