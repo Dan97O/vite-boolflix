@@ -22,7 +22,7 @@ export default {
           <div class="view"></div>
         </div>
         <div class="col-12 d-flex flex-wrap justify-content-center">
-          <MoviesList />
+          <MoviesList class=" overflow-scroll" />
         </div>
         <!-- /.col-12 -->
       </div>
@@ -38,10 +38,12 @@ main {
   background-color: rgba(0, 0, 0, 0.945);
   color: white;
   overflow-x: hidden;
+  overflow-y: auto;
 
   .view {
     background-color: rgba(0, 0, 0, 0.945);
     height: calc(100vh - 110px);
+    overflow: hidden;
   }
 }
 </style>

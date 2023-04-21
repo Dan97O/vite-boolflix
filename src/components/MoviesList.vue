@@ -29,13 +29,13 @@ export default {
     <ul class="title p-0">
       <li class="text-center p-1">{{ showTitle(movie) }}</li>
     </ul>
-    <ul class="info">
+    <ul class="info w-100">
       <li><strong>Titolo Originale: </strong>{{ showOriginalTitle(movie) }}</li>
       <li><strong>Lingua: </strong>
         <img class="flags" v-if="store.movies" :src="store.getFlagsUrl(movie)" />
       </li>
       <!-- Voto diviso 2 e arrotondato per eccesso -->
-      <li><strong>Voto: </strong>{{ Math.ceil(movie.vote_average / 2) }}</li>
+      <!-- <li><strong>Voto: </strong>{{ Math.ceil(movie.vote_average / 2) }}</li> -->
       <li>
         <strong>Stelle: </strong>
         <span v-for="i in 5">
@@ -51,11 +51,11 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  width: 300px;
+  width: 415px;
   background-color: rgba(0, 0, 0, 0.945);
   margin-bottom: 3rem;
   border-radius: 10px;
-  margin-right: 25px;
+  margin-right: 10px;
   box-shadow: 10px 9px 10px 6px #363636;
 
   .title {
@@ -75,7 +75,7 @@ export default {
   }
 
   img {
-    height: 450px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
   }
@@ -116,7 +116,7 @@ export default {
   }
 
   .overview {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 </style>
