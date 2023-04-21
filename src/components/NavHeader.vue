@@ -5,7 +5,7 @@ export default {
 }
 </script>
 <template>
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg p-0">
     <div class="container-fluid">
       <img class="img-logo" src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
         alt="Logo Netflix">

@@ -34,13 +34,13 @@ export default {
 
 
 <style lang="scss" scoped> header {
-   padding: 1rem 0;
+   //padding: 1rem 0;
    background-color: black;
-   height: 110px;
+   height: 70px;
    position: relative;
 
    .position-fixed {
-     padding: 1rem 0;
+     //padding: 1rem 0;
      background-color: black;
      box-shadow: 4px -2px 12px 6px #363636;
      top: 0px;

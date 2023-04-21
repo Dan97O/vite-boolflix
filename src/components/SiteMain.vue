@@ -39,11 +39,11 @@ main {
   color: white;
   overflow-x: hidden;
   overflow-y: auto;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 70px);
 
   .view {
     background-color: rgba(0, 0, 0, 0.945);
-    height: calc(100vh - 110px);
+    height: calc(100vh - 70px);
     overflow: hidden;
   }
 }
@@ -59,4 +59,5 @@ main:-webkit-scrollbar-track {
 main::-webkit-scrollbar-thumb {
   background-color: gray;
   border-radius: 25px;
-}</style>
+}
+</style>
